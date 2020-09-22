@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+/* -------------------------------------
+common
+-----------------------------------------*/
+
+body{
+  font-size: 100%;
+  min-height:100vh;
+  font-family: "Fjalla One","Sawarabi Gothic",sans-serif;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body *{
+  padding:0;
+  margin:0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+/* -------------------------------------
+ top
+-----------------------------------------*/
+
+/* TOPタイトル */
+
+#top{
+  width:100%;
+}
+
+.t-title{
+  display: flex;
+}
+
+h1{
+  margin:10px 0;
+  text-align: center;
+  color:#fff;
+  background-color: #fff;
+  -webkit-animation: bg-color 8s infinite;
+  animation: bg-color 8s infinite;
+  width: 300px;
+}
+
+@-webkit-keyframes identifier {
+  0% { background-color: #fff; }
+  0% { color:#000; }
+  100% { background-color: #dfcba5}
+}
+
+@keyframes bg-color {
+  0% { background-color: #fff; }
+  0% { color:#000; }
+  100% { background-color: #dfcba5}
+}
+
+.t-title p{
+  margin:20px auto;
+  font-size: 20px;
+}
+
+
+.top-content{
+  display: flex;
+}
+
+/* ギャラリー */
+
+.gallery{
+  margin: 0 auto;
+}
+
+.gallery img{
+  width:200px;
+  margin:20px;
+}
+
+
+/* ショッピングサイトへ遷移ボタン */
+
+.btn1{
+  position: absolute;
+  top:15%;
+  right:10%;
+}
+
+
+/*　中央画像とサイドのコンテンツ */
+
+.top-wrap{
+  display: flex;
+}
+
+.top-img{
+  text-align:center;
+}
+
+.top-img img{
+  width:50%;
+}
+
+.sub{
+  position: absolute;
+  top:28%;
+  left:8%;
+  letter-spacing: 0.78px;
+}
+
+.sub h3{
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #dfcba5;
+}
+
+.sub p{
+  font-size: 20px;
+}
+
+.ita{
+  color:#009bc6;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h2 a{
+  outline: none;
+  color:#fff;
+}
+
+h2 a:hover{
+  color:#cc0000;
+}
+
+/* ABOUT */
+
+.about{
+  position: absolute;
+  top:45%;
+  right:5%;
+  width:500px;
+}
+
+.about h3{
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #dfcba5;
+}
+
+/* FAQ */
+
+.faq-content{
+  position: absolute;
+  top:70%;
+  left:8%;
+  width:500px;
+}
+
+.faq-content h3{
+  font-size:20px;
+  background-color: #dfcba5;
+}
+
+.faq{
+  letter-spacing: 0.78px;
+  font-size:19px;
+}
+
+.f-title{
+  letter-spacing: 0.78px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.f-article{
+  font-size: 15px;
+  margin-bottom:10px;
+}
+
+.f-contact{
+  font-size:12px;
+  margin-top:40px;
+}
+
+.f-contact a{
+  font-weight: bold;
+  outline: none;
+  color:#fff;
+}
+
+.f-contact a:hover{
+  color:#cc0000;
+}
+
+/* ショッピングサイトへ遷移ボタン */
+
+.btn2{
+  position: absolute;
+  top:92%;
+  right:10%;
+}
+
+
+/* 遷移ボタンの装飾（共通） */
+
+.order p{
+  padding: 10px;
+  font-size: 20px;
+}
+
+.order a{
+  color:#fff;
+  border: 2px solid #009bc6;
+  background-color: #009bc6;
+  padding:10px;
+  width:25%;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+}
+
+.order a:hover{
+  color:#faa61a;
+  border: 2px solid #009bc6;
+  background-color: #fff;
+}
+
+/* -------------------------------------
+ Media Query
+-----------------------------------------*/
+
+/*タブレット横ウィンドウ幅が1024pxまでの場合に適用*/
+@media screen and (max-width: 1024px){
+
+  .modal-left img{
+    width: 350px;
+    height:550px;
+  }
+
+  .square-m img{
+    width:380px;
+    height:380px;
+  }
+
+  /* モーダル内写真スライド機能 */
+  .fa-arrow-alt-circle-right::before{
+    position: absolute;
+    left:330px;
+    top:240px;
+  }
+
+  .fa-arrow-alt-circle-left::before{
+    position: absolute;
+    left:330px;
+    top:240px;
+  }
+
+}
+
+/*タブレット縦ウィンドウ幅が896xまでの場合に適用*/
+@media screen and (max-width: 896px){
+
+  .modal-content{
+    width:90%;
+  }
+
+  .modal-left{
+    width:100%;
+  }
+
+  .modal-left img{
+    width: 400px;
+    height:600px;
+  }
+
+  .square-m img{
+    width:400px;
+    height:400px;
+  }
+
+  /* カート位置 */
+  #cart{
+    position: fixed;
+    top:40px;
+    right:20px;
+  }
+
+   /* ページトップへ */
+  .r-pagetop{
+    position: fixed;
+    bottom:50px;
+    right:25px;
+  }
+
+  .modal-close a{
+    position: absolute;
+    bottom:-20%;
+    right:0%;
+    font-size: 40px;
+  }
+
+  /* CONTACTページ幅調整 */
+  .contact-form{
+    max-width: 85%;
+  }
+
+}
+
+}
